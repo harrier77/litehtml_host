@@ -108,6 +108,8 @@ int lh_lbutton_down(void* doc, int x, int y, int client_x, int client_y);
 int lh_lbutton_up(void* doc, int x, int y, int client_x, int client_y);
 int lh_mouse_leave(void* doc);
 
+int lh_find_box(void* doc, const char* field_id, int* x, int* y, int* w, int* h);
+
 void lh_destroy(void* doc);
 
 const char* lh_version(void);

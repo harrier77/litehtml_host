@@ -9,5 +9,6 @@ EXPORTS
     lh_lbutton_down
     lh_lbutton_up
     lh_mouse_leave
+    lh_find_box
     lh_destroy
     lh_version

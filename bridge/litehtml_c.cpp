@@ -419,6 +419,36 @@ int lh_mouse_leave(void* doc)
     }
 }
 
+int lh_find_box(void* doc, const char* field_id, int* px, int* py, int* pw, int* ph)
+{
+    auto* hd = static_cast<lh_doc*>(doc);
+    if(!hd || !hd->doc || !field_id || !field_id[0])
+    {
+        return 0;
+    }
+    try
+    {
+        auto list = hd->doc->root()->select_all("[data-field]");
+        for(auto& el : list)
+        {
+            if(!el) continue;
+            const char* a = el->get_attr("data-field");
+            if(a && std::string(a) == field_id)
+            {
+                litehtml::position pos = el->get_placement();
+                if(px) *px = static_cast<int>(pos.x);
+                if(py) *py = static_cast<int>(pos.y);
+                if(pw) *pw = static_cast<int>(pos.width);
+                if(ph) *ph = static_cast<int>(pos.height);
+                return 1;
+            }
+        }
+    } catch(...)
+    {
+    }
+    return 0;
+}
+
 void lh_destroy(void* doc)
 {
     auto* h = static_cast<lh_doc*>(doc);
