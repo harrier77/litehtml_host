@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>litehtml test</title>
+<style>
+  body  { font-family: "Segoe UI", sans-serif; font-size: 16px; color: #202020; margin: 16px; }
+  h1    { color: #1a4d8f; font-size: 28px; margin: 0 0 12px 0; }
+  h2    { color: #2a6fbf; font-size: 20px; margin: 18px 0 8px 0; }
+  p     { line-height: 22px; }
+  .card { background-color: #f2f6fc; border: 2px solid #2a6fbf; padding: 12px; margin: 12px 0; }
+  .warn { background-color: #fff4d6; border-left: 6px solid #d9a300; padding: 10px; }
+  .small{ font-size: 13px; color: #666666; }
+  a     { color: #b00020; }
+  ul    { margin: 8px 0 8px 0; }
+  .green{ background-color: #e3f6e3; border: 1px solid #3a8f3a; padding: 8px; }
+</style>
+</head>
+<body>
+  <h1>litehtml in un'app C con TCC</h1>
+
+  <p>Questa pagina è resa da <b>litehtml</b> (motore C++17) dentro
+     un'applicazione scritta in <i>C puro</i> e compilata con
+     <b>Tiny C Compiler</b>. Il collegamento avviene tramite
+     <span style="color:#1a4d8f">litehtml_c.dll</span>.</p>
+
+  <div class="card">
+    <h2>Blocchi, colori e bordi</h2>
+    <p>Testo normale, <b>grassetto</b>, <i>corsivo</i>,
+       <u>sottolineato</u> e un <a href="https://example.com">link cliccabile</a>.</p>
+  </div>
+
+  <div class="warn">
+    <p>Questo è un avviso con bordo sinistro spesso.</p>
+  </div>
+
+  <div class="green">
+    <p>Un box verde con bordo sottile.</p>
+  </div>
+
+  <h2>Elenco</h2>
+  <ul>
+    <li>Primo elemento</li>
+    <li>Secondo elemento con <b>enfasi</b></li>
+    <li>Terzo elemento</li>
+  </ul>
+
+  <p class="small">Testo piccolo e grigio. Prova a ridimensionare la finestra:
+     il layout si adatta alla larghezza, e puoi fare scroll con la rotella
+     o con le frecce.</p>
+
+  <p>Paragrafo finale per verificare il wrapping automatico del testo su più
+     righe quando la finestra è stretta. Lorem ipsum dolor sit amet,
+     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+     exercitation ullamco laboris.</p>
+</body>
+</html>

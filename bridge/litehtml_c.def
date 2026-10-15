@@ -1,0 +1,13 @@
+LIBRARY litehtml_c
+EXPORTS
+    lh_create
+    lh_render
+    lh_draw
+    lh_width
+    lh_height
+    lh_mouse_over
+    lh_lbutton_down
+    lh_lbutton_up
+    lh_mouse_leave
+    lh_destroy
+    lh_version
